@@ -1,0 +1,20 @@
+<h1>Forecast page</h1>
+
+<a href="#" class="pageNav">Return to search</a>
+<hr>
+<div class="col-md-6 col-md-offset-3">
+	<br>
+	<h3>Your <span ng-show="{{days}}===3||{{days}}===5">{{days}}-day</span> <span ng-show="{{days}}===7">week's </span>forecast for {{city}}</h3>
+	<br>
+	Days:  <a href="#/forecast/3" ng-class="{'bg-primary': days==='3'}"> 3 </a>  |  <a href="#/forecast/5" ng-class="{'bg-primary': days==='5'}"> 5 </a>  |  <a href="#/forecast/7" ng-class="{'bg-primary': days==='7'}"> 7 </a>   <br>
+		<br>
+
+	<div ng-repeat="w in weatherResult['list']">
+		<div class="row">
+			<div class="col-md-12">
+				
+				<search-result weather-object="w" city-name="{{city}}" get-fahrenheit="kelvin2Fahrenheit(kelvin)" get-date="getDate(time)"></search-result>
+			</div>
+		</div>
+	</div>
+</div>

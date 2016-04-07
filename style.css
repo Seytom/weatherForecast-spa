@@ -1,0 +1,13 @@
+.pageNav{
+	float:right;
+	position: relative;
+	top:1rem;
+}
+
+h1{
+	display: inline;
+}
+
+.freeze{
+	background-image: url(images/snow.jpg);
+}

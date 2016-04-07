@@ -1,0 +1,12 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+
+		<h3 class="panel-title">{{getDate({time: weatherObject.dt}) | date: "MMM d, y"}}</h3>
+	</div>
+	<div class="panel-body" ng-class="{'freeze': {{getFahrenheit({kelvin: weatherObject.temp.day})}}<32}"><p>Daytime temperature: {{getFahrenheit({kelvin: weatherObject.temp.day})}}</p>
+		<p>Humidity: {{weatherObject.humidity}}</p>
+		<p>Wind: {{weatherObject.speed}}</p>
+
+	</div>
+</div>
+
